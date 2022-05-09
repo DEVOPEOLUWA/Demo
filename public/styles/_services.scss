@@ -1,0 +1,84 @@
+@import 'colors';
+@import 'responsivesness';
+
+.services{
+ background: #131313;
+ display: flex;
+ flex-direction:column;
+ justify-content: center;
+ align-items: center;
+ height: 100%;
+ padding: 10rem 0;
+
+ h1{
+  background-color: #833ab4;
+  background-image: linear-gradient(to right, rgb(102, 219, 255) 0%,#f6f6 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color:transparent;
+-moz-text-fill-color:transparent;
+margin-bottom: 5rem;
+font-size: 2.5rem;
+ }
+ &__wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  @include largest{
+   grid-template-columns: 1fr 1fr;
+  }
+  @include tablet{
+   grid-template-columns: 1fr;
+  }
+ }
+
+ &__card{
+  margin: 10px;
+    height: 425px;
+    width: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: linear-gradient(to right,#8c11df 0%,#df33ae 100%);
+    transition: 0.3s ease-in;
+
+
+    h2{
+     text-align: center;
+     
+    }
+    p{
+     text-align: center;
+     margin-top: 24px;
+     font-size: 20px;
+    }
+    button{
+     color: white;
+     padding: 14px 24px;
+     border: none;
+     outline: none;
+     border-radius: 10px;
+     background: #bf77c2;
+     font-size: 1rem;
+ 
+ :hover{
+     cursor: pointer;
+ }
+}
+ &:hover{
+     transform: scale(1.075);
+     transition: 0.3s ease-in;
+     cursor: pointer;
+ }
+    }
+ 
+ &__btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+ }
+
+}

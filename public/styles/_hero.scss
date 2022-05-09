@@ -1,0 +1,61 @@
+@import 'colors';
+@import 'responsivesness';
+
+%align-items{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+
+
+
+.hero{
+ background: black;
+ background: linear-gradient(to right,#161616,black);
+ padding: 200px;
+
+ &__container{
+ @extend %align-items;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90%;
+  text-align: center;
+  padding:0px;
+ }
+
+ &__heading{
+  font-size: 100px;
+  margin-bottom: 24px;
+  color:#c797c4;
+  
+  @include medium{
+   font-size: 60px;
+  }
+
+  span{
+   background: $backgroud-2;  
+    background: -webkit-linear-gradient(to right, #fdeff9, #ec38bc, #7303c0,#c797c4);
+    background: linear-gradient(to right, #fdeff9, #ec38bc, #7303c0,#c797c4); 
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    -moz-text-fill-color:transparent;
+  }
+ }
+ &__description{
+  font-size: 60px;
+  background: #03001e;  
+  background: -webkit-linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #c797c4);  
+  background: linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #c797c4); 
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color:transparent;
+  -moz-text-fill-color:transparent;
+
+  @include medium{
+   font-size: 40px;
+  }
+ }
+}

@@ -1,0 +1,246 @@
+@import 'colors';
+@import 'responsivesness';
+
+
+.main{
+ background-color: #000000;
+ padding: 2rem 2%;
+
+ &__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 90%;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0px 40px;  
+
+  @include larged{
+   display:grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      height: 90%;
+
+  }
+ }
+
+ &__contents{
+  color:white;
+  width: 100%;
+
+  h1{
+   font-size: 2rem;
+    background-color:#7707d3;
+background-image: linear-gradient(to top,#ff08ad 0%,#7c6bc7 100%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color:transparent;
+-moz-text-fill-color:transparent;
+text-transform: uppercase;
+margin-bottom: 32px;
+  }
+  h2{
+   font-size: 4rem;
+background: -webkit-linear-gradient(to right, #41022f, #ec38bc, #9c4f8f, #e205e7);  
+background: linear-gradient(to right, #fdeff9, #ec38bc, #9c4f8f, #e205d7); 
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color:transparent;
+-moz-text-fill-color:transparent;
+  }
+  p{
+   margin-top: 1rem;
+   font-size: 2rem;
+   font-weight: 700;
+   color: rgb(167, 116, 172)
+  }
+
+  @include larged{
+   text-align: center;
+   margin-bottom: 4rem;
+   
+   
+   h1{
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+ h2{
+    font-size: 3rem;
+}
+ p{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+     }
+   }
+   @include mobile{
+    
+     font-size: 2rem;
+     margin-top: 3rem;
+ 
+ h2{
+     font-size: 1.8rem;
+ }
+
+ p{
+     margin-top: 2rem;
+ }
+   }
+ }
+
+ &__img-container{
+  text-align: center;
+
+  @include larged{
+   display: flex;
+   justify-content: center;
+  }
+ }
+ &__img-card{
+  margin: 10px;
+  height: 500px;
+  width: 500px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  background-image: linear-gradient(to right, #40818d 0%, #ce21bf 100%);
+  
+  @include larged{
+   height: 430px;
+   width: 430px;
+  }
+@include mobile{
+ width: 300px;
+ height: 300px;
+}
+  
+  .fa-layer-group,.fa-users{
+   font-size: 14rem;
+
+   @include mobile{
+    width: 50px;
+        height: 80px;
+   }
+  }
+
+ }
+}
+
+.footer__container{
+  background-color: #131313;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer__logo{
+  color:darkviolet;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.footer__link{
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+.footer__link-wrapper{
+  display: flex;
+}
+.footer__link-items{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 16px;
+  text-align: left;
+  width:100%;
+  box-sizing: border-box;
+  @include mobile{
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
+}
+.footer__link-items h2{
+  margin-bottom: 16px;
+  color: #fff;
+}
+.footer__link-items a{
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+
+}
+.footer__link-items a:hover{
+  color: #ff1361;
+  transition: all 0.3s ease-out;
+}
+.social__icon-link{
+  font-size: 24px;
+}
+.social__media{
+  max-width:1000px ;
+  width: 100%;
+}
+.social__media-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+}
+.social__icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px ;
+  i{
+    color: #7707d3;
+    font-size: 1.4rem;
+    background: #ce21bf;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+}
+.social__media h3{
+  font-size: 1rem;
+  color: burlywood;
+
+}
+.website__rights{
+  color: darkmagenta;
+}
+
+@include medium {
+  .footer__links{
+      padding-top: 2rem;
+  }
+  #footer__logo{
+   margin-bottom: 2rem;
+  }
+  .website__rights{
+      margin-bottom: 2rem;
+  }
+  .footer__link-wrapper{
+      flex-direction: column;
+  }
+  
+  .social__media-wrap{
+      flex-direction: column;
+  }
+}
